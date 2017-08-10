@@ -18,7 +18,7 @@
 		"prefix": "factory",
 		"body": [
 			"factory ${1:name} do",
-			"\t${2:body}$0",
+			"\t$0",
 			"end"
 		],
 		"description": "Barebones factory block"
@@ -28,9 +28,20 @@
 		"prefix": "do",
 		"body": [
 			"do",
-			"\t${1:body}$0",
+			"\t$0",
 			"end"
 		],
 		"description": "Simple do-end block"
+	},
+
+	"Context when...": {
+		"prefix": "context",
+		"body": [
+			"context 'when ${1}' do",
+			"\t$0",
+			"end"
+		],
+		"description": "RSpec context block"
 	}
+
 }
